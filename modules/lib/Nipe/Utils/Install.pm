@@ -11,7 +11,7 @@ sub new {
 	system ("mkdir -p /etc/tor/");
 
 	if ($device{distribution} eq "debian") {
-		system ("apt-get install -y tor iptables systemd -y");
+		system ("apt-get update && apt-get install -y tor iptables systemd -y");
 		system ("cp .configs/debian-torrc /etc/tor/torrc");
 	}
 
