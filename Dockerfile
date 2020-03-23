@@ -31,4 +31,4 @@ RUN perl nipe.pl install -y
 # Execute nipe #
 ################
 
-CMD ["perl","nipe.pl","start"]
+ENTRYPOINT perl nipe.pl start
